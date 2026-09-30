@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arthemyo Rodrigues — Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="logo" href="#top">AR</a>
+    <nav><a href="#sites">Sites</a><a href="#ai">AI</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
+  </header>
+
+  <main id="top">
+    <section id="contact-top" class="contact contact-top">
+      <h2>Let's talk</h2>
+      <p>Open to new opportunities and collaborations. Send me a message:</p>
+      <div class="form-slot"></div>
+    </section>
+
+    <section class="hero">
+      <img id="avatar" alt="Profile photo" />
+      <div>
+        <p class="eyebrow" id="role"></p>
+        <h1 id="name"></h1>
+        <p class="bio" id="bio"></p>
+        <p class="meta" id="meta"></p>
+        <ul class="contact-list" id="links"></ul>
+      </div>
+    </section>
+
+    <section id="sites">
+      <h2>Websites I built</h2>
+      <div class="grid" id="sites-built"></div>
+      <h2 class="sub">Websites I contributed to</h2>
+      <div class="grid" id="sites-contributed"></div>
+    </section>
+
+    <section id="ai">
+      <h2>AI integration</h2>
+      <p class="lead" id="ai-intro"></p>
+      <div class="grid" id="ai-capabilities"></div>
+      <h2 class="sub">AI-powered projects</h2>
+      <div class="grid" id="ai-projects"></div>
+    </section>
+
+    <section id="projects">
+      <h2>Featured projects</h2>
+      <div class="grid" id="project-grid"></div>
+    </section>
+
+    <section id="more" hidden>
+      <h2>More on GitHub</h2>
+      <ul class="repo-list" id="repo-list"></ul>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="chips" id="skill-list"></div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Let's talk</h2>
+      <p>Open to new opportunities and collaborations.</p>
+      <ul class="contact-list" id="contact-links"></ul>
+
+      <div class="form-slot"></div>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> Arthemyo Rodrigues</footer>
+
+  <template id="contact-form-template">
+    <form class="contact-form" novalidate>
+      <div class="row">
+        <label>Name<input name="name" required maxlength="100" autocomplete="name" /></label>
+        <label>Email<input name="email" type="email" required maxlength="254" autocomplete="email" /></label>
+      </div>
+      <div class="row">
+        <label>Phone (optional)<input name="phone" type="tel" inputmode="numeric" autocomplete="tel-national"
+          placeholder="(00) 00000-0000" maxlength="15" pattern="\(\d{2}\) \d{4,5}-\d{4}"
+          title="Brazilian phone: (00) 00000-0000 or (00) 0000-0000" /></label>
+        <label>Subject<input name="subject" required maxlength="150" /></label>
+      </div>
+      <label>Message<textarea name="message" rows="6" required maxlength="5000"></textarea></label>
+      <input type="text" name="website" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <button type="submit" class="btn primary">Send message</button>
+      <p class="form-status" role="status"></p>
+    </form>
+  </template>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
